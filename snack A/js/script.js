@@ -21,7 +21,19 @@ createApp({
                         messageStatus : 'sent'
                     }
                 );
+                this.genResponse();
             }
+        },
+        genResponse () {
+            axios.get('https://flynn.boolean.careers/exercises/api/random/sentence')
+                .then((response) => {
+                    this.messageList.push(
+                        {
+                            messageText : response.data.response,
+                            messageStatus : 'receive'
+                        }
+                    );
+                });
         }
     }
 }).mount('#app');

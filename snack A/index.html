@@ -32,9 +32,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="write-message">
+                    <div id="write-message" class=" d-flex justify-content-center align-items-center">
                         <input type="text" name="new-message" id="new-message" v-model="textNewMessage"
-                        @keyup.enter="sentMessage(textNewMessage); textNewMessage = '';">
+                        @keyup.enter="sentMessage(textNewMessage); textNewMessage = '';" class="w-75 h-75"
+                        placeholder="Scrivi un messaggio e premi Enter">
                     </div>
                 </main>
             </div>

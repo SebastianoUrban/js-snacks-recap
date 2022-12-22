@@ -1,0 +1,42 @@
+#wrapper {
+    height: 100vh;
+}
+
+main {
+    width: 50vw;
+    height: 75vh;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+#chat {
+    background-color: lightgray;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+#write-message {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+}
+
+
+.message {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    max-width: 50%;
+}
+
+
+
+.sent-message {
+    background-color: rgb(95, 167, 95);
+    align-self: flex-end;
+}
+
+.receive-message {
+    background-color: rgb(179, 177, 86);
+}

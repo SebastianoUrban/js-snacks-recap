@@ -17,15 +17,27 @@
         <!-- VUE.js -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-        <title>Snack 2</title>
+        <title>Snack A</title>
     </head>
 
     <body>
         <div id="app">
-            <main>
-                {{gen10Names()}}
-
-            </main>
+            <div id="wrapper" class="d-flex justify-content-center align-items-center">
+                <main class="">
+                    <div id="chat" class="p-4">
+                        <ul class="list-unstyled d-flex flex-column">
+                            <li v-for="mess in messageList" class="message"
+                            :class="((mess.messageStatus == 'sent') ? 'sent-message' : 'receive-message' )" >
+                                {{mess.messageText}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="write-message">
+                        <input type="text" name="new-message" id="new-message" v-model="textNewMessage"
+                        @keyup.enter="sentMessage(textNewMessage); textNewMessage = '';">
+                    </div>
+                </main>
+            </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
         <script type="text/javascript" src="./js/script.js"></script>
